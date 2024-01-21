@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>web portofolio-Sari Marlina</title>
+</head>
+
+<body id="home">
+    <!--  style="background: #eff4fd; -bg-white- -border-bottom-"-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top bg-opacity-50 px-3">
+        <div class="container p-1">
+            <a class="navbar-brand" href="#home">Sari Marlina</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portofolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-sm btn-outline-warning rounded-pill" href="asset/CV_Sari.pdf"
+                            target="_BLANK">Download CV</a>
+                    </li>
+                    <!-- Dark Mode Menu -->
+                    <li class="nav-item nav_btns d-flex align-items-center">
+                        <div class="nav_toggle" id="nav-toggle" onclick="setColor()">
+                            <i class="far fa-moon change-theme" id="tombol-siang"></i>
+                        </div>
+                        <div class="nav_toggle" id="nav-toggle" onclick="setColor()">
+                            <i class="fas fa-sun change-theme" id="tombol-malam"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" style="padding-top: 10rem;" class="home pb-5">
+        <div class="container container-color">
+            <div class="row">
+                <div class="col-lg-7 d-flex mb-3">
+                    <div class="home-delay text-center px-5">
+                        <div class="box-content mb-4">
+                            <a href="tel:+62082123690662" target="_BLANK" class="btn btn-outline-danger rounded-circle">
+                                <i class="fas fa-phone"></i>
+                            </a><br>
+                        </div>
+                        <div class="box-content mb-4">
+                            <a href="https://www.facebook.com/sari.marlina21?sfnsn=wiwspwa&mibextid=RUbZ1f" target="_BLANK"
+                                class="btn btn-outline-danger rounded-circle">
+                                <i class="fab fa-facebook"></i>
+                            </a><br>
+                        </div>
+                        <div class="box-content mb-4">
+                            <a href="https://www.instagram.com/srmln__/" target="_BLANK"
+                                class="btn btn-outline-danger rounded-circle">
+                                <i class="fab fa-instagram"></i>
+                            </a><br>
+                        </div>
+                        <div class="box-content mb-4">
+                            <a href="https://github.com/sarimarlina" target="_BLANK"
+                                class="btn btn-outline-danger rounded-circle">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="home-delay w-full self-center">
+                        <h5 class="text-secondary">Hallo 👋, saya</h5>
+                        <h1 class="font-weight-bold p-0 m-0"><strong class="text-secondary">Sari Marlina</strong></h1>
+                        <h6 class="pb-2 text-secondary">Junior <strong class="text-secondary">Web Developer</strong>
+                        </h6>
+                        <p class="text-secondary paraf line-height">Saya adalah seorang Junior Web Developer yang
+                            tertarik untuk mempelajari teknologi baru di bidang Web Programming, ini adalah situs Web
+                            Portofolio saya, untuk menunjukkan detail dari pekerjaan<br> Pengembangan Web Developer
+                        </p>
+                        <a href="https://wa.me/+6282399624591" class="btn btn-outline-secondary rounded-pill"><i
+                                class="fab fa-whatsapp"></i> Hubungi saya</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="home-image text-center">
+                        <!-- <img src="/img/v1.png" class="images-responsive rounded-circle" alt="images" width="70%"> -->
+                        <!-- <h1
+                            style="font-size: 200px; display: block; padding: 0; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                            </>
+                        </h1> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="about-delay text-center mb-4">
+                    <h3><strong class="text-secondary">About Me</strong></h3>
+                    <p class="title text-secondary">Data Pribadi Singkat</p>
+                </div>
+            </div>
+            <div class="row justify-content-center about-delay">
+                <div class="col-md-5 text-center mb-3">
+                    <img src="img/bw.png" alt="images" class="img img-thumbnail" width="60%">
+                    <!-- <img alt="" class="img img-thumbnail" width="60%"> -->
+                </div>
+                <div class="col-md-5">
+                    <p class="text-secondary paraf lh-lg">Hallo! Nama saya Sari Marlina, Saya seorang Junior Web
+                        Developer, sedang berkuliah di Amik Aktan Boekittinggi semester akhir jurusan Manajemen Informatika D3, yang
+                        memiliki keinginan dan tekat yang kuat untuk mempelajari hal baru di bidang Web Programming dan
+                        mampu beradaptasi dengan baik serta saya mampu bekerja secara individu maupun berkolaborasi
+                        dengan tim.<!-- saya sedang mengembangkan Web dengan Bahasa Pemrograman PHP menggunakan Framework CodeIgniter 4 -->
+                        
+                    </p>
+                    <a href="asset/CV" target="_BLANK" class="btn btn-sm btn-outline-secondary rounded-pill"><i
+                            class="fas fa-arrow-down"></i> Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="portfolio-delay col text-center mb-4">
+                    <h3><strong class="text-secondary">Portofolio</strong></h3>
+                    <p class="title text-secondary">Berikut ini beberapa Projek yang pernah saya kerjakan</p>
+                </div>
+            </div>
+            <div class="row portfolio-delay">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="img/1.png" class="card-img-top" alt="portofolio">
+                        <div class="card-body">
+                            <p class="card-text text-secondary paraf">Website portofolio untuk menunjukan detail dari
+                                pengembangan web, dapat dilihat di github secara open source</p>
+                            <a href="https://github.com/jeckrisen/jeckrisen.github.io"
+                                class="text-decoration-none">Kunjungi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="img/2.png" class="card-img-top" alt="sik">
+                        <div class="card-body">
+                            <p class="card-text text-secondary paraf">Sebuah website tugas Mahasiswa yaitu Website
+                                Tentang Sekolah atau Kampus, dapat di lihat di github secara open source</p>
+                            <a href="https://github.com/sarimarlina/sarimarlina-kampus"
+                                class="text-decoration-none">Kunjungi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="pb-5">
+        <div class="container">
+            <div class="row contact-delay">
+                <div class="text-center mb-4">
+                    <h3><strong class="text-secondary">Hubungi Saya</strong></h3>
+                    <p class="title text-secondary">Beberapa kontak di bawa ini yang bisa dihubungi</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 mb-4 contact-delay">
+                    <div class="contact mb-4">
+                        <h5>Nomor Telepon</h5>
+                        <div class="dflex d-flex py-2">
+                            <i class="fas fa-phone contact mt-1"></i> &nbsp&nbsp&nbsp<div class="d-flex contact">
+                                +6282399624591</div>
+                        </div>
+                    </div>
+                    <div class="contact mb-4">
+                        <h5>Email</h4>
+                            <div class="dflex d-flex py-2">
+                                <i class="fas fa-envelope contact mt-1"></i> &nbsp&nbsp&nbsp<div class="d-flex contact">
+                                    sarimarlina178@gmail.com</div>
+                            </div>
+                    </div>
+                    <div class="contact">
+                        <h5>Alamat</h5>
+                        <div class="dflex d-flex py-2">
+                            <i class="fas fa-map-marker-alt contact mt-1"></i> &nbsp&nbsp&nbsp<div class="contact">
+                                Solok, Sumatra Barat</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 contact-delay">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pesan" class="form-label">Pesan</label>
+                            <textarea class="form-control" placeholder="Tulis pesan disini.." id="pesan"></textarea>
+                        </div>
+                        <button type="submit" class="btn rounded-pill btn-outline-warning text-secondary">Kirim
+                            Pesan!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-4 text-center text-white">
+        <div> Web Portofolio</div>
+        <span class="text-muted">(ASM)</span>
+    </footer>
+
+    <!-- Backto Top -->
+    <a href="#home" class="back-to-top rounded-pill responsive" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
