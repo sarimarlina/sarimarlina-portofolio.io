@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sari Marlina | Data Processing & Web Developer</title>
+
+    <meta name="description" content="Portfolio Sari Marlina - Data Processing, Data Management, Python, Excel, CSV Optimization, and Web Development.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #7158e2;
+            --secondary: #4895ef;
+            --dark: #17172e;
+            --light: #f7f8fc;
+            --text: #55566b;
+            --card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            transition: 0.3s;
+        }
+
+        body.dark-mode {
+            --light: #11111f;
+            --dark: #f5f5ff;
+            --text: #c4c4d4;
+            --card: #1d1d32;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: var(--card);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 23px;
+            color: var(--primary) !important;
+        }
+
+        .nav-link {
+            color: var(--dark) !important;
+            font-size: 13px;
+            font-weight: 500;
+            margin-left: 12px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-weight: 800;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: var(--text);
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 90% 20%, rgba(113,88,226,0.14), transparent 30%),
+                radial-gradient(circle at 10% 90%, rgba(72,149,239,0.13), transparent 30%);
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: rgba(113,88,226,0.12);
+            color: var(--primary);
+            padding: 9px 17px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 60px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.9;
+            max-width: 600px;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 9px;
+            padding: 13px 23px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(113,88,226,0.25);
+        }
+
+        .btn-outline-custom {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            border-radius: 9px;
+            padding: 12px 22px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-avatar {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            margin: auto;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 95px;
+            font-weight: 800;
+            box-shadow: 0 20px 50px rgba(113,88,226,0.25);
+        }
+
+        /* ABOUT */
+
+        .about-card {
+            background: var(--card);
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+        }
+
+        .about-card p {
+            color: var(--text);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .info-item {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(128,128,128,0.15);
+            font-size: 13px;
+        }
+
+        .info-item strong {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        /* SKILLS */
+
+        .skill-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 14px;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card i {
+            font-size: 30px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .skill-card h5 {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .skill-card p {
+            color: var(--text);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* PROJECTS */
+
+        .project-card {
+            background: var(--card);
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid rgba(128,128,128,0.08);
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(113,88,226,0.13);
+        }
+
+        .project-banner {
+            height: 155px;
+            background: linear-gradient(135deg, #7158e2, #4895ef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .project-banner i {
+            font-size: 55px;
+        }
+
+        .project-content {
+            padding: 23px;
+        }
+
+        .project-content h5 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .project-content p {
+            color: var(--text);
+            font-size: 12px;
+            line-height: 1.8;
+            min-height: 85px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: rgba(113,88,226,0.10);
+            color: var(--primary);
+            border-radius: 5px;
+            padding: 5px 9px;
+            font-size: 10px;
+            font-weight: 600;
+            margin: 3px 2px 8px 0;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .project-link:hover {
+            color: var(--secondary);
+        }
+
+        /* CERTIFICATES */
+
+        .certificate-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 14px;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .certificate-card i {
+            color: var(--primary);
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .certificate-card h5 {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .certificate-card p {
+            font-size: 12px;
+            color: var(--text);
+        }
+
+        /* CONTACT */
+
+        .contact-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 14px;
+            height: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 23px;
+        }
+
+        .contact-item i {
+            background: rgba(113,88,226,0.12);
+            color: var(--primary);
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        .contact-item h6 {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            font-size: 12px;
+            color: var(--text);
+            margin: 0;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #17172e;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 12px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+            background: rgba(113,88,226,0.12);
+            color: var(--primary);
+            border-radius: 50%;
+            margin-right: 8px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        #themeToggle {
+            border: none;
+            background: transparent;
+            color: var(--dark);
+            font-size: 17px;
+            padding: 5px 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+                padding: 100px 0 60px;
+            }
+
+            .hero-avatar {
+                width: 190px;
+                height: 190px;
+                font-size: 65px;
+                margin-top: 45px;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .about-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">SARI<span class="gradient-text">.</span></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certificate">Certificate</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item">
+                    <button id="themeToggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <span class="hero-label">
+                    <i class="fas fa-circle-check"></i>
+                    Available for Work
+                </span>
+
+                <h1>
+                    Hello, I'm<br>
+                    <span class="gradient-text">Sari Marlina</span>
+                </h1>
+
+                <h5 class="fw-semibold mb-3">
+                    Data Processing | Data Management | Web Development
+                </h5>
+
+                <p>
+                    I am an Information Management graduate interested in
+                    data processing, data management, administrative systems,
+                    and web development. I enjoy transforming raw data into
+                    organized and useful information through technology.
+                </p>
+
+                <div class="mt-4">
+                    <a href="#portfolio" class="btn-primary-custom me-2 mb-2">
+                        Explore My Work
+                    </a>
+
+                    <a href="#contact" class="btn-outline-custom mb-2">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="social-links mt-4">
+                    <a href="https://github.com/sarimarlina" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://sarimarlina.github.io/sarimarlina-portofolio.io" target="_blank" rel="noopener noreferrer" aria-label="Website">
+                        <i class="fas fa-globe"></i>
+                    </a>
+
+                    <a href="https://www.upwork.com/freelancers/~01c44a32496a9d932c" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="hero-avatar">SM</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <p class="section-subtitle">Get to know me and my professional background.</p>
+        </div>
+
+        <div class="about-card">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h4 class="fw-bold mb-3">Who Am I?</h4>
+
+                    <p>
+                        I am a Diploma graduate in Information Management
+                        from AMIK Bukittinggi, Indonesia. I have an interest
+                        in data processing, administrative work, information
+                        systems, and web development.
+                    </p>
+
+                    <p>
+                        I have experience in administrative activities,
+                        data management, website development, and technology
+                        projects. I have also worked on personal projects
+                        involving CSV optimization, data validation,
+                        compression benchmarking, and large dataset processing.
+                    </p>
+
+                    <p>
+                        I am a detail-oriented person, eager to learn,
+                        adaptable, and motivated to improve my technical
+                        and professional skills. I am open to freelance,
+                        remote, and entry-level opportunities.
+                    </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="info-item">
+                        <strong>Education:</strong> Diploma (D3)
+                    </div>
+                    <div class="info-item">
+                        <strong>Major:</strong> Information Management
+                    </div>
+                    <div class="info-item">
+                        <strong>University:</strong> AMIK Bukittinggi
+                    </div>
+                    <div class="info-item">
+                        <strong>Location:</strong> West Sumatra, Indonesia
+                    </div>
+                    <div class="info-item">
+                        <strong>Work:</strong> Freelance / Remote
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+            <p class="section-subtitle">Technologies and tools I work with.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4 col-sm-6">
+                <div class="skill-card">
+                    <i class="fas fa-file-csv"></i>
+                    <h5>Data Processing</h5>
+                    <p>CSV processing, data cleaning, validation, splitting, and data transformation.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h5>Python</h5>
+                    <p>Python scripting for data processing, automation, and file management.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="skill-card">
+                    <i class="fas fa-table"></i>
+                    <h5>Microsoft Excel</h5>
+                    <p>Spreadsheet management, data organization, and reporting.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h5>Database Management</h5>
+                    <p>Basic database operations, data organization, and information management.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h5>Web Development</h5>
+                    <p>HTML, CSS, JavaScript, PHP, Laravel, and CodeIgniter.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="skill-card">
+                    <i class="fas fa-laptop"></i>
+                    <h5>Administration</h5>
+                    <p>Data entry, document management, administrative support, and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">My <span class="gradient-text">Portfolio</span></h2>
+            <p class="section-subtitle">Selected projects and practical work.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- PROJECT 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="project-banner">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h5>Personal Portfolio Website</h5>
+                        <p>
+                            A personal website presenting my profile,
+                            technical skills, projects, and professional
+                            background.
+                        </p>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <a class="project-link d-block"
+                           href="https://github.com/sarimarlina/sarimarlina-portofolio.io"
+                           target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="project-banner">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-content">
+                        <h5>Academic Information System</h5>
+                        <p>
+                            An academic-related web project designed
+                            to support information management and
+                            administrative activities.
+                        </p>
+                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">Database</span>
+                        <a class="project-link d-block"
+                           href="https://github.com/sarimarlina/sarimarlina-kampus"
+                           target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="project-banner">
+                        <i class="fas fa-house"></i>
+                    </div>
+                    <div class="project-content">
+                        <h5>Village Website</h5>
+                        <p>
+                            A village information website project
+                            designed to present local information
+                            through a web-based platform.
+                        </p>
+                        <span class="tech-tag">CodeIgniter</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <a class="project-link d-block"
+                           href="https://github.com/sarimarlina/websitedesa_ci4"
+                           target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="project-banner">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-content">
+                        <h5>Large Dataset Processing</h5>
+                        <p>
+                            A practical data engineering project focused
+                            on processing, cleaning, and organizing
+                            large datasets using Python.
+                        </p>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">CSV</span>
+                        <span class="tech-tag">Data Cleaning</span>
+                        <a class="project-link d-block"
+                           href="https://github.com/sarimarlina/large-dataset-portfolio"
+                           target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="project-banner">
+                        <i class="fas fa-file-csv"></i>
+                    </div>
+                    <div class="project-content">
+                        <h5>CSV Optimization Portfolio</h5>
+                        <p>
+                            A Python project processing 1 million
+                            synthetic records, splitting CSV files,
+                            validating data integrity, and benchmarking
+                            GZIP compression with 82.77% storage reduction.
+                        </p>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">CSV</span>
+                        <span class="tech-tag">GZIP</span>
+                        <span class="tech-tag">SHA-256</span>
+                        <a class="project-link d-block"
+                           href="https://github.com/sarimarlina/csv-optimization-portfolio"
+                           target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="section" id="certificate">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">My <span class="gradient-text">Certificates</span></h2>
+            <p class="section-subtitle">Training, learning, and professional development.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="certificate-card">
+                    <i class="fas fa-certificate"></i>
+                    <h5>Academic Background</h5>
+                    <p>Diploma in Information Management, AMIK Bukittinggi.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="certificate-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h5>Technology Projects</h5>
+                    <p>Practical experience through web development and data processing projects.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="certificate-card">
+                    <i class="fas fa-users"></i>
+                    <h5>Learning & Collaboration</h5>
+                    <p>Experience in learning activities, administration, and collaborative projects.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center mt-4 small" style="color:var(--text);">
+            Official certificate files can be added to this section when available.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+            <p class="section-subtitle">Let's connect and discuss potential opportunities.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-card">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h6>Email</h6>
+                            <!-- Ganti dengan alamat email aktif milikmu -->
+                            <a href="mailto:sarimarlina2105@gmail.com">sarimarlina2105@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h6>GitHub</h6>
+                            <a href="https://github.com/sarimarlina" target="_blank" rel="noopener noreferrer">
+                                github.com/sarimarlina
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <h6>Upwork</h6>
+                            <a href="https://www.upwork.com/freelancers/sarimarlina21052002?mp_source=share" target="_blank" rel="noopener noreferrer">
+                                View My Upwork Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item mb-0">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <h6>Location</h6>
+                            <p>West Sumatra, Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p class="mb-1">
+        © <span id="currentYear"></span> Sari Marlina. All Rights Reserved.
+    </p>
+    <p class="mb-0">Designed and developed with passion.</p>
+</footer>
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Current year
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    // Dark mode
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = themeToggle.querySelector("i");
+
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            themeIcon.classList.remove("fa-moon");
+            themeIcon.classList.add("fa-sun");
+        } else {
+            themeIcon.classList.remove("fa-sun");
+            themeIcon.classList.add("fa-moon");
+        }
+    });
+
+    // Close mobile navbar after clicking a link
+    document.querySelectorAll(".navbar-nav .nav-link").forEach(function(link) {
+        link.addEventListener("click", function() {
+            const menu = document.getElementById("navbarMenu");
+            const collapse = bootstrap.Collapse.getInstance(menu);
+
+            if (collapse) {
+                collapse.hide();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
